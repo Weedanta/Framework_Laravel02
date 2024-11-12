@@ -14,4 +14,7 @@ Route::get('events/{location}/{name}', [App\Http\Controllers\EventsController::c
 
 Route::get('/events', [App\Http\Controllers\EventsController::class, 'index']);
 
+Route::get('events/validate',[App\Http\Controllers\EventsController::class, 'showValidateForm'])->name('validateform.event');
 
+
+Route::post('events/validate',[App\Http\Controllers\EventsController::class, 'validateForm'])->name('validate.event');
